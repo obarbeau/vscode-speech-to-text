@@ -1,6 +1,7 @@
 {
 	"name": "vscode-speech-to-text",
 	"displayName": "VS Code Speech to Text",
+	"publisher": "olefjaerestad / obarbeau",
 	"description": "Simple speech-to-text extension for Visual Studio Code.",
 	"version": "0.0.1",
 	"engines": {
@@ -49,5 +50,10 @@
 		"express": "^4.17.1",
 		"open": "^7.0.4",
 		"ws": "^7.4.6"
+	},
+	"license": "SEE LICENSE IN LICENSE.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/obarbeau/vscode-speech-to-text.git"
 	}
 }
