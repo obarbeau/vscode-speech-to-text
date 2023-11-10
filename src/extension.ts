@@ -14,7 +14,7 @@ const websocketPort = 9001;
 app.use('/', express.static(path.join(__dirname, 'client')));
 app.listen(port, () => {
 	vscode.window.showInformationMessage(`[Speech to Text] Server running at localhost:${port}`);
-	open(`http://localhost:${port}`);
+	//open(`http://localhost:${port}`);
 });
 
 // this method is called when your extension is activated
@@ -46,12 +46,12 @@ export function activate(context: vscode.ExtensionContext) {
 				 * todo: Add support for multiple selections? Use vscode.commands.
 				 */
 				const path = vscode.window.activeTextEditor?.document.fileName;
-				
+
 				if (path) {
 					if (
-						Object.keys(COMMAND_MAPPINGS).includes(phrase) && 
+						Object.keys(COMMAND_MAPPINGS).includes(phrase) &&
 						(
-							(Object.keys(COMMAND_MAPPINGS[phrase]).includes('if') && COMMAND_MAPPINGS[phrase].if) || 
+							(Object.keys(COMMAND_MAPPINGS[phrase]).includes('if') && COMMAND_MAPPINGS[phrase].if) ||
 							!Object.keys(COMMAND_MAPPINGS[phrase]).includes('if')
 						)
 					) {

@@ -8,7 +8,7 @@ const outputEl = document.getElementById('output');
 
 recognition.continuous = true; // Keep recording results.
 recognition.interimResults = false; // Return non-final results. Fast, but inaccurate.
-recognition.lang = 'en-US'; // 'nb-NO' for norwegian.
+recognition.lang = 'fr-FR'; // 'en-US'; // 'nb-NO' for norwegian.
 recognition.maxAlternatives = 1;
 
 recognition.addEventListener('result', (e: any) => {
@@ -17,7 +17,7 @@ recognition.addEventListener('result', (e: any) => {
 });
 recognition.addEventListener('end', (e: any) => {
 	/**
-	 * Restart speech recognition when it stops, 
+	 * Restart speech recognition when it stops,
 	 * as it seems to stop after X time without speech.
 	 * https://stackoverflow.com/questions/42895760/how-to-stop-and-restart-web-speech-api-correctly
 	 * https://stackoverflow.com/questions/34818154/webkitspeechrecognition-stops-recording-randomly
